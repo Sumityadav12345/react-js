@@ -8,6 +8,7 @@ import Wrapper from "./wrapper";
 function App(){
   const[fruit,setFruit]=useState("Apple");
   const[display,setDisplay]=useState(true);
+  const[val,setVal]=useState("")
   const handleFruit=()=>{
     setFruit("banana")
   }
@@ -63,6 +64,11 @@ function App(){
   <Wrapper color="blue">
     <h1 >hello sahil</h1>
   </Wrapper>
+
+  <h1>Get Input field Value</h1>
+  <input type="text" value={val} onChange={(event)=>setVal(event.target.value)} placeholder="enter your name"></input>
+  <h1>{val}</h1>
+  <button onClick={()=>setVal("")}>clear value</button>
     </div>
   )
 }
